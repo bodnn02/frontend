@@ -1,0 +1,124 @@
+@import '../../styles/vars.scss';
+.wrapper{
+max-width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $gray-50;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.btn_container{
+  width: fit-content;
+  height: 32px;
+}
+.container{
+  width: 800px;
+}
+.user{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  .login{
+    @include large-text;
+    font-size: 36px;
+  }
+  .username{
+    @include thin-text;
+    color: $gray-500;
+  }
+}
+.subtitle{
+  @include large-text;
+  margin: 40px 0 16px;
+
+}
+.time, .auditory{
+  width: 100%;
+  display: flex;
+  div{
+    width: 100%;
+    &:first-child{
+      margin-right: 8px;
+    }
+  }
+}
+.auditory{
+  div:last-child{
+  margin-left: 8px;
+
+}}
+.subtitle_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stories_mobile{
+  display: none;
+}
+.stories_box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(194px, 1fr)); 
+  gap: 8px; 
+  justify-content: center;
+}
+.users_box{
+  padding: 24px;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $gray-200;
+
+}
+.link{
+  text-decoration: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+@media (max-width: 900px) {  
+  .wrapper{
+    display: block;
+  }
+  .time, .auditory{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    div{
+      width: 100%;
+      &:first-child{
+        margin: 0 0 12px;
+      }
+    }
+  }
+  .auditory{
+    div:last-child{
+    margin: 12px 0 0;
+  }}
+  .container{
+    width: auto;
+  }
+}
+
+@media (max-width: 560px){
+  .stories_box{
+    display: none;
+  }
+  .stories_mobile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    div:nth-child(2n){
+      margin-left: 0px;
+    }
+    div:nth-child(4n-2){
+      margin-right: 0px;
+    }
+  }
+}

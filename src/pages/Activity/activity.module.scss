@@ -1,0 +1,46 @@
+@import '../../styles/vars.scss';
+.wrapper{
+  padding: 24px 24px 66px 0;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: $gray-50;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.container{
+  width: 80%;
+}
+
+.title{
+  @include large-text;
+  font-size: 30px;
+  margin-top: 16px;
+}
+
+ .login{
+  @include thin-text;
+}
+.bold{
+  @include large-text;
+}
+.bold,.login{
+  margin: 0 0 32px;
+}
+
+.chart_card{
+  padding: 24px;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $gray-200;
+  width: 800px;
+}
+
+@media (max-width: 990px) {
+  .chart_card{
+    width: auto;
+  }
+}

@@ -1,0 +1,226 @@
+@import '../styles/vars.scss';
+.header{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn{
+height: 32px;
+color: $blue-500;
+font-family: 'Inter';
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+background-color: inherit;
+display: inline-flex;
+padding: 0px 12px;
+justify-content: center;
+align-items: center;
+border-radius: 6px;
+border: 1px solid $blue-500;
+&:hover{
+  background-color: $blue-500;
+  color: $white;
+  cursor: pointer;
+}}
+ a.btn{
+  text-decoration: none;
+}
+.wrapper{
+padding: 24px;
+border-radius: 8px;
+border: 1px solid $gray-200;
+height: 180px;
+background: $white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+.title_container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .icon{
+    width: 10px;
+  }
+  .title{
+    @include thin-text;
+  }
+}
+.content{
+  @include large-text;
+  font-size: 20px;
+  margin-top: 5px;
+}
+}
+.btn_box{
+  height: 32px;
+}
+.simple{
+  @include thin-text;
+font-size: 14px;
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: end;
+&:first-child{
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-200;
+}
+}
+
+.story{
+  height:400px ;
+  width: 194px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  color: $white;
+  padding: 5px;
+  margin-bottom: 4px;
+}
+.label_active, .label_archive{
+  border-radius: 6px;
+  width: fit-content;
+  padding: 0 8px;
+  color: $white;
+  text-decoration: none;
+}
+.label_active{
+  background-color: $green-500;
+  margin-right: 12px;
+}
+.label_archive{
+  background-color: $orange;
+}
+.stat_box{
+  padding: 16px;
+  .views{
+    margin-bottom: 12px;
+    .span{
+      margin-right: 12px;
+    }
+  }
+}
+.user_mobile{
+  display: none;
+}
+.user_wrapper{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray-200;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  &:last-child{
+    border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  }
+  .ava_box{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-size: cover;
+    margin-right: 16px;
+  }
+}
+.user_passport{
+  display: flex;
+  width: 370px;
+}
+.user_info, .user_views, .user_likes{
+  p:first-child{
+    margin: 4px 0;
+    @include large-text;
+  }
+  p:nth-child(2n){
+    @include thin-text;
+    color: $gray-500;
+  }
+  
+}
+.red_heart{
+  filter: invert(67%) sepia(89%) saturate(7492%) hue-rotate(346deg)
+}
+.user_passport{
+.user_info {
+  .status_online{
+  color: #3182CE;
+}
+.status_offline{
+  color: #718096;
+}}}
+
+
+@media (max-width: 560px) {  
+  .user_wrapper{
+    display: none;
+  }
+  .user_mobile{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray-200;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    .ava_box{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background-size: cover;
+      margin-right: 16px;
+    }
+    .dots:hover{
+      cursor: pointer;
+    }
+  }
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #0000007A;
+      display: flex;
+      align-items: center; 
+      justify-content: center; 
+      z-index: 9999; 
+    }
+    .popup_content{
+      background-color: $white;
+      padding: 16px 24px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .user_passport{
+        display: flex;
+        position: relative;
+      
+        .ava_box{
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          background-size: cover;
+          }
+        .exit{
+          position: absolute;
+          font-size: x-large;
+          right: 0;
+          font-weight: 700;
+          transform: rotate(45deg);
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      .views_cont{
+        width: fit-content;
+        .user_views{
+          margin: 12px 0;
+        }
+      }
+    }
+  
+}
